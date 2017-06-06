@@ -50,7 +50,7 @@
 		background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
 		background: -webkit-linear-gradient(#969ac6, #636F8F);
 		/*background: linear-gradient(#969ac6,#636F8F);*/
-		 background: radial-gradient(circle, #ffee00, #ff6F8F); /* Standard syntax */
+		 background: radial-gradient(circle, #9f9491, #557e9b); /* Standard syntax */
 	}
 
 	#section1{
@@ -133,6 +133,8 @@
 	
 	
 	<div class="section " id="section0">
+	
+	<div class="slide active">
     <section id="portfolio">
         <div class="container">
             <div class="row">
@@ -145,15 +147,13 @@
 
 			
                 <div class=" col-xs-6 col-sm-6 col-md-4    portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="#" onclick = "$.fn.fullpage.moveTo(1, 1);" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-						
                         <img src="img/dailycheckin.png" class="img-responsive" style= 'margin-left:auto;margin-right:auto;' alt="Cabin">
-                   
 					<h2 style ="font-weight:800; color:white; Text-Transform:none;font-size:16pt">Daily Checkin</h2><br/>
 				   </a>	
                 </div>
@@ -161,7 +161,7 @@
 							
 			
                 <div class=" col-xs-6 col-sm-6 col-md-4    portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                     <a href="#" onclick = "$.fn.fullpage.moveTo(2, 0);" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -237,6 +237,9 @@
             </div>
         </div>
     </section>
+	</div>
+	<div class="slide">
+	</div>
 	</div>
 
 
@@ -424,11 +427,10 @@
 
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 
 	<script type="text/javascript" src="js/scrolloverflow.js"></script>
-
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/examples.js"></script>
 
@@ -436,7 +438,21 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('#fullpage').fullpage();
+			$('#fullpage').fullpage(
+			{
+
+		//	continuousVertical: true,
+			//scrollOverflow: true
+
+			}
+			
+			
+			);
+			
+			
+		
+			 
+			
 		});
 	</script>
 	
